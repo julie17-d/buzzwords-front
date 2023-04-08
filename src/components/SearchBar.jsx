@@ -14,7 +14,7 @@ const SearchBar = ({ fetchSearch }) => {
     return (
         <div class="flex justify-center items-center">
         <input
-            class="m-2 md:m-5 lg:m-5 text-black w-48 md:w-96 lg:w-96"
+            class="m-2 md:m-5 text-black w-48 md:w-96"
             type="search"
             value={search}
             placeholder=""

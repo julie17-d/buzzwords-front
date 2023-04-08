@@ -1,11 +1,11 @@
-import './App.css';
-import React, { useEffect, useState } from "react";
+// import '../Root.css';
+import React, { useState } from "react";
 import axios from 'axios';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import DisplayBooksSearched from './components/DisplayBooksSearched';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
+import DisplayBooksSearched from '../components/DisplayBooksSearched';
 
-function App() {
+function Root() {
   const [bookSearched, setBookSearched] = useState([]);
   const apiKey = "AIzaSyDmyjBMXd4xErp3AweAg_Y_LMCGP-6ZM1k";
 
@@ -22,16 +22,19 @@ function App() {
     }
   }
   return (
-    <div className="App">
-      <header className="App-header">
-      {/* <div class="flex items-start"> */}
+    <div className="Root" class="text-center bg-buzzwords-yellow flex flex-col items-center justify-center min-h-screen">
+      <header>
         <Header />
         <SearchBar fetchSearch={fetchSearch} />
-        <DisplayBooksSearched bookSearched={bookSearched} />
-      {/* </div> */}
       </header>
+      <body>
+        <div>
+            
+        </div>
+        <DisplayBooksSearched bookSearched={bookSearched} />
+      </body>
     </div>
   );
 }
 
-export default App;
+export default Root;
