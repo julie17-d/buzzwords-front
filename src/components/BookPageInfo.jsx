@@ -1,5 +1,6 @@
 import parse from 'html-react-parser';
 
+//Single Book's info page design
 const BookPageInfo = ( {book} ) => {
     return (
         <div class="flex items-center">

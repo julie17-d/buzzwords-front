@@ -2,6 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 
 const DisplayBooksSearched = ({ bookSearched }) => {
     if (bookSearched.length !== 0) {
+        //map through and return results of search
         let results = bookSearched[0].items.map(function (result) {
 
             return (
