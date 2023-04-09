@@ -13,13 +13,13 @@ const SearchBar = ({ fetchSearch }) => {
 
     return (
         <div class="flex justify-center items-center">
-        <input
-            class="m-2 md:m-5 text-black w-48 md:w-96"
-            type="search"
-            value={search}
-            placeholder=""
-            onChange={(e) => searched(e)}
-        ></input>
+            <input
+                class="m-2 md:m-5 text-black w-48 md:w-96"
+                type="search"
+                value={search}
+                placeholder=""
+                onChange={(e) => searched(e)}
+            ></input>
         </div>
     );
 };

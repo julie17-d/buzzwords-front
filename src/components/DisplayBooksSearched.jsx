@@ -8,7 +8,10 @@ const DisplayBooksSearched = ({ bookSearched }) => {
                 <div class="flex flex-col items-center">
                     {/* <div class="flex m-2 md:m-5 lg:m-5"> */}
                     <Link to={`book/${result.id}`}>
-                        <img src={result.volumeInfo.imageLinks?.thumbnail ?? "/book-cover.png"} class="transition ease-in-out delay-100 hover:scale-150 w-16 md:w-32 shadow-2xl" alt="cover" />
+                        <img src={result.volumeInfo.imageLinks?.thumbnail ?? "/book-cover.png"}
+                            class="transition ease-in-out delay-100 hover:scale-150 w-16 md:w-32 shadow-2xl"
+                            alt="book cover"
+                        />
                     </Link>
                     <div class="flex flex-col">
                         <h3 className="book-title" class="m-2 md:m-5 font-bold">{result.volumeInfo.title ? result.volumeInfo.title : "Undefined"}</h3>
@@ -34,15 +37,17 @@ const DisplayBooksSearched = ({ bookSearched }) => {
         })
         return (
             <div>
-            {results}
-            <Outlet />
+                {results}
+                {/* <Outlet /> */}
             </div>
         )
     }
     else {
         return (
             <div>
-                <h2 class="font-serif Playfair Display">start searching to see books appear</h2>
+                <h2 class="font-serif Playfair Display text-base sm:text-lg lg:text-2xl">
+                    start searching to see books appear
+                </h2>
             </div>
         )
     }

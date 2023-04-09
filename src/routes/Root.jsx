@@ -7,13 +7,12 @@ import DisplayBooksSearched from '../components/DisplayBooksSearched';
 
 function Root() {
   const [bookSearched, setBookSearched] = useState([]);
-  const apiKey = "AIzaSyDmyjBMXd4xErp3AweAg_Y_LMCGP-6ZM1k";
+  const apiKey = "AIzaSyB5ETyYFu2r_rGuxJU4tqslxjRnhGPcsp8";
 
   const fetchSearch = async (value) => {
     if (value) {
       try {
         const result = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${value}&key=${apiKey}`);
-
         console.log(result.data);
         setBookSearched([result.data]);
       } catch (e) {
@@ -29,7 +28,7 @@ function Root() {
       </header>
       <body>
         <div>
-            
+
         </div>
         <DisplayBooksSearched bookSearched={bookSearched} />
       </body>
