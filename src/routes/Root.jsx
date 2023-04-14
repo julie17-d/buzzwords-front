@@ -7,8 +7,7 @@ import DisplayBooksSearched from '../components/DisplayBooksSearched';
 //Main page
 function Root() {
   const [bookSearched, setBookSearched] = useState([]);
-  //TODO: put apiKey in .env
-  const apiKey = "AIzaSyB5ETyYFu2r_rGuxJU4tqslxjRnhGPcsp8";
+  const apiKey = `${process.env.REACT_APP_API_KEY}`;
 
   const fetchSearch = async (value) => {
     if (value) {

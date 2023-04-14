@@ -6,8 +6,7 @@ import BookPageInfo from '../components/BookPageInfo';
 
 //Page for a single book's infos
 const Test = () => {
-    //TODO: put apiKey in .env
-    const apiKey = "AIzaSyB5ETyYFu2r_rGuxJU4tqslxjRnhGPcsp8";
+    const apiKey = `${process.env.REACT_APP_API_KEY}`;
     const [book, setBook] = useState([]);
 
     //get infos on a single speicific volume
